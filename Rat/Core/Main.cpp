@@ -1,4 +1,4 @@
-#include "RTHeader.h"
+#include <RTHeader.h>
 #include "Core/Engine.h"
 
 int main()

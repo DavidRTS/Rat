@@ -4,21 +4,96 @@
     <Filter Include="Core">
       <UniqueIdentifier>{2EB4837C-1AEB-840D-C3D7-6A10AFED000F}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Events">
+      <UniqueIdentifier>{3A8963B1-262B-8E87-0FE6-A1DBFB2615D8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input">
+      <UniqueIdentifier>{953A660D-014F-8EBE-CAD0-311E36A48AEF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{F68B420E-62A0-6ABF-2B22-0E1F97F566F0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\glm">
+      <UniqueIdentifier>{45210F44-B18B-C3BA-FAC9-74606673A10F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\glm\simd">
+      <UniqueIdentifier>{C11033C4-ADDE-26CA-9672-97F082DF022F}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Core\Core.h">
+      <Filter>Core</Filter>
+    </ClInclude>
     <ClInclude Include="Core\Engine.h">
       <Filter>Core</Filter>
     </ClInclude>
     <ClInclude Include="Core\Logger.h">
       <Filter>Core</Filter>
     </ClInclude>
+    <ClInclude Include="Events\ApplicationEvent.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\Event.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\EventDispatcher.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\EventManager.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\KeyEvent.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\MouseEvent.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\WindowEvent.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Input\InputAction.h">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Input\InputBinding.h">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Input\InputEnums.h">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Input\InputManager.h">
+      <Filter>Input</Filter>
+    </ClInclude>
     <ClInclude Include="RTHeader.h" />
-    <ClInclude Include="Input\ApplicationEvent.h" />
-    <ClInclude Include="Input\Event.h" />
-    <ClInclude Include="Input\EventDispatcher.h" />
-    <ClInclude Include="Input\KeyEvent.h" />
-    <ClInclude Include="Core\Core.h" />
-    <ClInclude Include="Input\MouseEvent.h" />
+    <ClInclude Include="Utils\glm\simd\common.h">
+      <Filter>Utils\glm\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\glm\simd\exponential.h">
+      <Filter>Utils\glm\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\glm\simd\geometric.h">
+      <Filter>Utils\glm\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\glm\simd\integer.h">
+      <Filter>Utils\glm\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\glm\simd\matrix.h">
+      <Filter>Utils\glm\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\glm\simd\neon.h">
+      <Filter>Utils\glm\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\glm\simd\packing.h">
+      <Filter>Utils\glm\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\glm\simd\platform.h">
+      <Filter>Utils\glm\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\glm\simd\trigonometric.h">
+      <Filter>Utils\glm\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\glm\simd\vector_relational.h">
+      <Filter>Utils\glm\simd</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Core\Engine.cpp">
@@ -29,6 +104,12 @@
     </ClCompile>
     <ClCompile Include="Core\Main.cpp">
       <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Events\EventManager.cpp">
+      <Filter>Events</Filter>
+    </ClCompile>
+    <ClCompile Include="Input\InputManager.cpp">
+      <Filter>Input</Filter>
     </ClCompile>
     <ClCompile Include="RTHeader.cpp" />
   </ItemGroup>

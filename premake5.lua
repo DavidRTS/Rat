@@ -25,7 +25,14 @@ project "Rat"
 
 	includedirs
 	{
-		"Rat"
+		"Rat",
+		"glm",
+		"nlohmann"
+	}
+
+	links
+	{
+
 	}
 
 	pchheader "RTHeader.h"
@@ -39,8 +46,8 @@ project "Rat"
 
 		defines
 		{
-			"RT_PLATFORM_WINDOWS"
-			"RT_BUILD_DLL"
+			"RT_PLATFORM_WINDOWS",
+			"RT_BUILD_DLL",
 			"RAT_API"
 		}
 
