@@ -1,12 +1,11 @@
-#include "Engine.h"
 #include "RTHeader.h"
-#include <iostream>
+#include "Core/Engine.h"
 
 bool Engine::running = true; // Properly defined static member
 
 bool Engine::Init()
 {
-	Logger::Info("Engine", "Initialized!");
+	RTE_LOG_INFO("Initialized");
 	return true;
 }
 
@@ -14,14 +13,14 @@ void Engine::Run()
 {
 	while (running)
 	{
-		Logger::Info("Engine", "Running game loop...");
+		RTE_LOG_INFO("Running game loop...");
 		running = false;
 	}
 }
 
 void Engine::Shutdown()
 {
-	Logger::Info("Engine", "Shutting down.");
+	RTE_LOG_INFO("Shutting down.");
 }
 
 bool Engine::IsRunning()

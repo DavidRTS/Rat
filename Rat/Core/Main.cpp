@@ -1,20 +1,25 @@
-#include "Engine.h"
 #include "RTHeader.h"
-#include <iostream>
+#include "Core/Engine.h"
 
 int main()
 {
-	Logger::Info("Engine", "Booting up...");
+	RTE_LOG_INFO("Booting up...");
+	RTE_LOG_WARN("Logging test");
+	RTE_LOG_ERROR("Logging test");
 
 	if (!Engine::Init())
 	{
-		Logger::Error("Engine", "Failed to initialized!");
+		RTE_LOG_ERROR("Failed to initialized!");
 		return -1;
 	}
+
+	RTI_LOG_INFO("Booting up...");
+	RTI_LOG_WARN("Logging test");
+	RTI_LOG_ERROR("Logging test");
 
 	Engine::Run();
 	Engine::Shutdown();
 
-	Logger::Info("Engine", "Shutdown complete.");
+	RTE_LOG_INFO("Shutdown complete.");
 	return 0;
 }

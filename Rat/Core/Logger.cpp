@@ -24,7 +24,7 @@ void Logger::Info(const std::string& category, const std::string& message)
 	Log(category, ColorWrap("INFO: " + message, GREEN));
 }
 
-void Logger::Warning(const std::string& category, const std::string& message)
+void Logger::Warn(const std::string& category, const std::string& message)
 {
 	Log(category, ColorWrap("WARNING: " + message, YELLOW));
 }

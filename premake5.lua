@@ -7,7 +7,7 @@ workspace "Rat"
 		"Release"
 	}
 
-outputdir = "%{cfg.buildcfg}-%{cfg,system}-${cfg.architecture}"
+outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 project "Rat"
 	location "Rat"
@@ -25,8 +25,12 @@ project "Rat"
 
 	includedirs
 	{
-
+		"Rat"
 	}
+
+	pchheader "RTHeader.h"
+	pchsource "Rat/RTHeader.cpp"
+
 
 	filter "system:windows"
 		cppdialect "C++17"
@@ -35,12 +39,14 @@ project "Rat"
 
 		defines
 		{
-
+			"RT_PLATFORM_WINDOWS"
+			"RT_BUILD_DLL"
+			"RAT_API"
 		}
 
 		postbuildcommands
 		{
-			("{COPY} %{cfg.buildtarget.relpath} ../bin/.." ..outputdir.. "/Interactor")
+		    --"{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Interactor"
 		}
 
 	filter "configurations:Debug"
